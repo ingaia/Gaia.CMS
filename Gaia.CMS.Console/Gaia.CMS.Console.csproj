@@ -64,7 +64,7 @@
       <Project>{006257fe-1433-4b4a-9350-e5fa8b32e5ab}</Project>
       <Name>Gaia.CMS</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Gaia.Utils\Gaia.Common.csproj">
+    <ProjectReference Include="..\Gaia.Common\Gaia.Common.csproj">
       <Project>{af0832ff-478c-4e6f-a333-a055840b0cd7}</Project>
       <Name>Gaia.Common</Name>
     </ProjectReference>
