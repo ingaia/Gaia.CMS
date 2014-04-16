@@ -1,0 +1,11 @@
+﻿{
+"TemplateName" : "Modelo04",
+"TemplateConfig" : "templateConfig",
+"DefaultConfig" : "defaultConfig",
+"ImagesConfig" : "imagesConfig",
+"ClientDirName" : "Teste05",
+"ModelFolder" : "modelo",
+"DefaultTemplateFolder" : "default",
+"SourcePath" : "C:\\Users\\jhonathan.almeida\\ProjetosTeste\\CMS\\Templates",
+"TargetPath" : "C:\\Users\\jhonathan.almeida\\ProjetosTeste\\cms\\Deploy"
+}

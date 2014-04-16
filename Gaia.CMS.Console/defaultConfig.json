@@ -1,0 +1,12 @@
+﻿{
+"CodImb" : "2375",
+"ListaContatos" :[
+	{"Unidade" : "SJC", "Telefone" : "1111-9999", "Nome" : "Inacio"},
+	{"Unidade" : "Campinas", "Telefone" : "2222-8888", "Nome" : "Mauro"},
+	{"Unidade" : "São Paulo", "Telefone" : "3333-7777", "Telefone2" : "7777-3333", "Nome" : "Fidélio"}
+],
+"BodyBackgroundColor" : "black",
+"BodyWidth" : "90%",
+"BodyFontSize" : "12px",
+"BodyBorderColor" : "#FFFFFF"
+}
