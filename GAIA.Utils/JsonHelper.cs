@@ -1,6 +1,6 @@
 ﻿using System.Web.Script.Serialization;
 
-namespace GAIA.Common
+namespace Gaia.Common
 {
     public static class JsonHelper
     {

@@ -1,6 +1,6 @@
 ﻿using System.Configuration;
 
-namespace GAIA.Common
+namespace Gaia.Common
 {
     public class ConfigReader
     {

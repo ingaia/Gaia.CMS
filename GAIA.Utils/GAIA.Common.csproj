@@ -7,8 +7,8 @@
     <ProjectGuid>{AF0832FF-478C-4E6F-A333-A055840B0CD7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GAIA.Common</RootNamespace>
-    <AssemblyName>GAIA.Common</AssemblyName>
+    <RootNamespace>Gaia.Common</RootNamespace>
+    <AssemblyName>Gaia.Common</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

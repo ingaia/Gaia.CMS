@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GAIA.Common
+namespace Gaia.Common
 {
     public static class Utils
     {

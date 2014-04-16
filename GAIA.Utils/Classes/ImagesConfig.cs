@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace GAIA.Common.Classes
+namespace Gaia.Common.Classes
 {
     public class LogoImage
     {

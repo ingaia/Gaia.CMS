@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 
-namespace GAIA.Common
+namespace Gaia.Common
 {
     public static class Extensions
     {

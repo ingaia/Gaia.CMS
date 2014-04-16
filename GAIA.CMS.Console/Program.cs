@@ -1,5 +1,5 @@
-﻿using GAIA.Common;
-using GAIA.Common.Classes;
+﻿using Gaia.Common;
+using Gaia.Common.Classes;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 
-namespace GAIA.CMS.Console
+namespace Gaia.CMS.Console
 {
     class Program
     {
@@ -18,7 +18,7 @@ namespace GAIA.CMS.Console
             // -- Help session ----------------------------------------------------------------------------------------
             if (args.Count() == 1 && (args[0].Compare("/h") || args[0].Compare("/help") || args[0].Compare("help")))
             {
-                System.Console.WriteLine("Command usage: GAIA.CMS.Console.exe caminho\\baseConfig.json");
+                System.Console.WriteLine("Command usage: Gaia.CMS.Console.exe caminho\\baseConfig.json");
 
                 return;
             }

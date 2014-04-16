@@ -7,8 +7,8 @@
     <ProjectGuid>{D0DE75A3-5291-4AE8-8FF5-63418054EFF5}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GAIA.CMS.Console</RootNamespace>
-    <AssemblyName>GAIA.CMS.Console</AssemblyName>
+    <RootNamespace>Gaia.CMS.Console</RootNamespace>
+    <AssemblyName>Gaia.CMS.Console</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -60,13 +60,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GAIA.CMS\GAIA.CMS.csproj">
+    <ProjectReference Include="..\Gaia.CMS\Gaia.CMS.csproj">
       <Project>{006257fe-1433-4b4a-9350-e5fa8b32e5ab}</Project>
-      <Name>GAIA.CMS</Name>
+      <Name>Gaia.CMS</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GAIA.Utils\GAIA.Common.csproj">
+    <ProjectReference Include="..\Gaia.Utils\Gaia.Common.csproj">
       <Project>{af0832ff-478c-4e6f-a333-a055840b0cd7}</Project>
-      <Name>GAIA.Common</Name>
+      <Name>Gaia.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

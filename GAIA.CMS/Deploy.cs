@@ -1,7 +1,7 @@
-﻿using GAIA.Common.Classes;
+﻿using Gaia.Common.Classes;
 using System.Collections.Generic;
 
-namespace GAIA.CMS
+namespace Gaia.CMS
 {
     public static class Deploy
     {

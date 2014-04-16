@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 
-namespace GAIA.Common
+namespace Gaia.Common
 {
     public static class IOHelper
     {

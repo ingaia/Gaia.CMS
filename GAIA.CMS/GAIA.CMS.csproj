@@ -7,8 +7,8 @@
     <ProjectGuid>{006257FE-1433-4B4A-9350-E5FA8B32E5AB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GAIA.CMS</RootNamespace>
-    <AssemblyName>GAIA.CMS</AssemblyName>
+    <RootNamespace>Gaia.CMS</RootNamespace>
+    <AssemblyName>Gaia.CMS</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -53,9 +53,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GAIA.Utils\GAIA.Common.csproj">
+    <ProjectReference Include="..\Gaia.Utils\Gaia.Common.csproj">
       <Project>{af0832ff-478c-4e6f-a333-a055840b0cd7}</Project>
-      <Name>GAIA.Common</Name>
+      <Name>Gaia.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

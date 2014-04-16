@@ -1,11 +1,11 @@
-﻿using GAIA.Common;
-using GAIA.Common.Classes;
+﻿using Gaia.Common;
+using Gaia.Common.Classes;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace GAIA.CMS
+namespace Gaia.CMS
 {
     internal static class DeployHelper
     {

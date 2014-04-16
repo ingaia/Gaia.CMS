@@ -25,7 +25,7 @@ Os seguintes arquivos devem ser preenchidos:
 
 Esse arquivo contém os parâmetros básicos para executar o Deploy do Template/Modelo escolhido. Este arquivo pode ser renomeado para atender as necessidades, bastando informar o nome na hora de executar o Deploy, por ex. caso deseje deixar pronto um config para o "Modelo01", podemos chamar o mesmo de "modelo01BaseConfig.json", assim o comando para executa-lo seria: 
 
-GAIA.CMS.Console.exe "caminho\modelo01BaseConfig.json"
+Gaia.CMS.Console.exe "caminho\modelo01BaseConfig.json"
 
 Este arquivo deve ter o seguinte formato:
 {
@@ -83,7 +83,7 @@ WaterMarkImage: Especifica qual o arquivo a ser utilizado como Marca D'Água.
 1.2 - Executando
 
 Para executar o processo de deploy, deve-se executar o seguinte comando: 
-GAIA.CMS.Console.exe "caminhoDoArquivo\baseConfig.json".
+Gaia.CMS.Console.exe "caminhoDoArquivo\baseConfig.json".
 
 Os arquivos de configuração devem estar na mesma pasta do arquivo "baseConfig.json".
 
@@ -248,7 +248,7 @@ Ao executar o deploy, teremos o resultado desejado no arquivo "index.aspx":
 4 - Repita os passos 1 a 3 para todos os arquivos a serem transformados em template;
 5 - Configure o arquivo "baseConfig.json" com as informações desejadas;
 6 - Configure o arquivo "imagensConfig.json" com os arquivos Logo e Marca D'Água, e a lista de arquivos/tamanhos a serem gerados;
-7 - execute a aplicação "GAIA.CMS.Console.exe" informando o arquivo baseConfig.json.
+7 - execute a aplicação "Gaia.CMS.Console.exe" informando o arquivo baseConfig.json.
 
 Para utilização de lista de valores, a lista deve ser declarada no formato:
 "NomeDaLista" :[
