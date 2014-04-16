@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Gaia.CMS : " />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Gaia.CMS</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/I-Value/Gaia.CMS">View on GitHub</a>
+
+          <h1 id="project_title">Gaia.CMS</h1>
+          <h2 id="project_tagline"></h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/I-Value/Gaia.CMS/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/I-Value/Gaia.CMS/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="gaiacmsconsole-help" class="anchor" href="#gaiacmsconsole-help"><span class="octicon octicon-link"></span></a>Gaia.CMS.Console HELP</h1>
+
+<p><strong>Índice:</strong></p>
+
+<p><strong><a href="https://github.com/I-Value/Gaia.CMS/edit/master/README.md#1---utiliza%C3%A7%C3%A3o-do-comando-de-deploy">1 - Utilização do comando de deploy</a></strong><br><a href="https://github.com/I-Value/Gaia.CMS/edit/master/README.md#11---configurando">1.1 - Configurando</a><br><a href="https://github.com/I-Value/Gaia.CMS/edit/master/README.md#12---executando">1.2 - Executando</a><br><br><strong><a href="https://github.com/I-Value/Gaia.CMS/edit/master/README.md#2---configura%C3%A7%C3%A3o-do-template">2 - Configuração do Template</a></strong><br><a href="https://github.com/I-Value/Gaia.CMS/edit/master/README.md#21---configurando-os-arquivos-para-serem-processados-pelo-sistema">2.1 - Configurando os arquivos para serem processados pelo sistema</a><br><a href="https://github.com/I-Value/Gaia.CMS/edit/master/README.md#22---utilizando-o-sistema-de-templates">2.2 - Utilizando o sistema de templates</a><br><a href="https://github.com/I-Value/Gaia.CMS/edit/master/README.md#exemplo-1-arquivo-css">- Exemplo 1</a><br><a href="https://github.com/I-Value/Gaia.CMS/edit/master/README.md#exemplo-2-arquivo-xmlconfig">- Exemplo 2</a><br><a href="https://github.com/I-Value/Gaia.CMS/edit/master/README.md#exemplo-3-arquivo-htmlaspxaspxetc">- Exemplo 3</a><br></p>
+
+<p><strong><a href="https://github.com/I-Value/Gaia.CMS/edit/master/README.md#3---resumo-de-utiliza%C3%A7%C3%A3o">3 - Resumo de utilização</a></strong></p>
+
+<h1></h1>
+
+<h2>
+<a name="1---utiliza%C3%A7%C3%A3o-do-comando-de-deploy" class="anchor" href="#1---utiliza%C3%A7%C3%A3o-do-comando-de-deploy"><span class="octicon octicon-link"></span></a>1 - Utilização do comando de deploy</h2>
+
+<h3>
+<a name="11---configurando" class="anchor" href="#11---configurando"><span class="octicon octicon-link"></span></a>1.1 - Configurando</h3>
+
+<p>Os seguintes arquivos devem ser preenchidos:</p>
+
+<ul>
+<li>baseConfig.json:</li>
+</ul><p>Esse arquivo contém os parâmetros básicos para executar o Deploy do Template/Modelo escolhido. Este arquivo pode ser renomeado para atender as necessidades, bastando informar o nome na hora de executar o Deploy, por ex. caso deseje deixar pronto um config para o "Modelo01", podemos chamar o mesmo de "modelo01BaseConfig.json", assim o comando para executa-lo seria: </p>
+
+<pre><code>IValue.CMS.Console.exe "caminho\modelo01BaseConfig.json"
+</code></pre>
+
+<p>Este arquivo deve ter o seguinte formato:</p>
+
+<div class="highlight highlight-JSON"><pre><span class="p">{</span>
+<span class="nt">"TemplateName"</span> <span class="p">:</span> <span class="s2">"Modelo01"</span><span class="p">,</span>
+<span class="nt">"TemplateConfig"</span> <span class="p">:</span> <span class="s2">"templateConfig"</span><span class="p">,</span>
+<span class="nt">"DefaultConfig"</span> <span class="p">:</span> <span class="s2">"defaultConfig"</span><span class="p">,</span>
+<span class="nt">"ImagesConfig"</span> <span class="p">:</span> <span class="s2">"imagesConfig"</span><span class="p">,</span>
+<span class="nt">"ModelFolder"</span> <span class="p">:</span> <span class="s2">"modelo"</span><span class="p">,</span>
+<span class="nt">"DefaultTemplateFolder"</span> <span class="p">:</span> <span class="s2">"default"</span><span class="p">,</span>
+<span class="nt">"ClientDirName"</span> <span class="p">:</span> <span class="s2">"Cliente01"</span><span class="p">,</span>
+<span class="nt">"SourcePath"</span> <span class="p">:</span> <span class="s2">"Y:\novopremium.com.br\web"</span><span class="p">,</span>
+<span class="nt">"TargetPath"</span> <span class="p">:</span> <span class="s2">"Y:\"</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><strong>TemplateName:</strong> É o nome do template (nome da pasta no diretório "SourcePath") a ser utilizado;<br><strong>TemplateConfig:</strong> Especifica o nome do arquivo de configuração para o Template (visa facilitar o processo de deploy permitindo deixar configurados arquivos para cada tipo de modelo);<br><strong>DefaultConfig:</strong> Especifica o nome do arquivo de configuração para o default (visa facilitar o processo de deploy permitindo deixar configurados arquivos para cada tipo de modelo);<br><strong>ImagesConfig:</strong> Especifica o nome do arquivo de configuração de imagens (visa facilitar o processo de deploy permitindo deixar configurados arquivos para cada tipo de modelo);<br><strong>ClientDirName:</strong> É o nome do diretório que será criado na pasta "TargetPath" para fazer o deploy do Template escolhido;<br><strong>ModelFolder:</strong> É o nome da pasta utilizada para fazer deploy do modelo dentro do template "default";<br><strong>DefaultTemplateFolder:</strong> É o nome da pasta do template "Default";<br><strong>SourcePath:</strong> É o diretório onde será encontrada a pasta “default” e a pasta do modelo especificado em “TemplateName”;<br><strong>TargetPath:</strong> É a pasta destino onde será feito o deploy do Template escolhido.<br></p>
+
+<ul>
+<li>defaultConfig.json:</li>
+</ul><p>Esse arquivo contém as configurações a serem aplicadas durante o processo de Deploy. Este arquivo pode ter seu nome alterado, desde que seja devidamente apontado no campo "DefaultConfig" do arquivo "baseConfig.json".<br><strong>Obs.:</strong> O conteúdo deste arquivo não deve sobrepor o conteúdo do arquivo "templateConfig.json", caso isso ocorra, um dos dois será ignorado.</p>
+
+<ul>
+<li>templateConfig.json:</li>
+</ul><p>Esse arquivo contém as configurações a serem aplicadas durante o processo de Deploy. Este arquivo pode ter seu nome alterado, desde que seja devidamente apontado no campo "TemplateConfig" do arquivo "baseConfig.json".<br><strong>Obs.:</strong> O conteúdo deste arquivo não deve sobrepor o conteúdo do arquivo "defaultConfig.json", caso isso ocorra, um dos dois será ignorado.</p>
+
+<ul>
+<li>imagesConfig.json:</li>
+</ul><p>Este arquivo configura o processo de deploy do Logo e da Marca d'água. Este arquivo pode ter seu nome alterado, desde que seja devidamente apontado no campo "ImagesConfig" do arquivo "baseConfig.json".</p>
+
+<p>Este arquivo deve ter o seguinte formato:</p>
+
+<div class="highlight highlight-JSON"><pre><span class="p">{</span>
+<span class="nt">"ImgFolder"</span> <span class="p">:</span> <span class="s2">"img"</span><span class="p">,</span>
+<span class="nt">"LogoImage"</span> <span class="p">:</span> <span class="s2">"C:\\Users\\jhonathan.almeida\\Projetos\\cms\\logo.png"</span><span class="p">,</span>
+<span class="nt">"LogoImages"</span> <span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span><span class="nt">"OutputName"</span><span class="p">:</span> <span class="s2">"img1.png"</span><span class="p">,</span> <span class="nt">"Width"</span> <span class="p">:</span> <span class="s2">"50"</span><span class="p">,</span> <span class="nt">"Height"</span> <span class="p">:</span> <span class="s2">"50"</span><span class="p">},</span>
+        <span class="p">{</span><span class="nt">"OutputName"</span><span class="p">:</span> <span class="s2">"img2.png"</span><span class="p">,</span> <span class="nt">"Width"</span> <span class="p">:</span> <span class="s2">"75"</span><span class="p">,</span> <span class="nt">"Height"</span> <span class="p">:</span> <span class="s2">"75"</span><span class="p">}</span>
+    <span class="p">],</span>
+<span class="nt">"WaterMarkImage"</span> <span class="p">:</span> <span class="s2">"C:\\Users\\jhonathan.almeida\\Projetos\\cms\\marca_dagua.png"</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><strong>ImgFolder:</strong> Especifica o nome do diretório onde será feito o deploy das imagens;<br><strong>LogoImage:</strong> Especifica qual o arquivo a ser utilizado como logo;<br><strong>LogoImages:</strong> Especifica através dos parâmetros "OutputName", "Width" e "Height" quais são e o tamanho dos arquivos a serem gerados com base no arquivo de logo;<br><strong>WaterMarkImage:</strong> Especifica qual o arquivo a ser utilizado como Marca D'Água.</p>
+
+<h3>
+<a name="12---executando" class="anchor" href="#12---executando"><span class="octicon octicon-link"></span></a>1.2 - Executando</h3>
+
+<p>Para executar o processo de deploy, deve-se executar o seguinte comando: </p>
+
+<pre><code>IValue.CMS.Console.exe "caminhoDoArquivo\baseConfig.json".
+</code></pre>
+
+<p>Os arquivos de configuração devem estar na mesma pasta do arquivo "baseConfig.json".</p>
+
+<h2>
+<a name="2---configura%C3%A7%C3%A3o-do-template" class="anchor" href="#2---configura%C3%A7%C3%A3o-do-template"><span class="octicon octicon-link"></span></a>2 - Configuração do Template</h2>
+
+<p>O sistema de CMS/Deploy de template utiliza o algoritmo de Templates Mustache na sua compilação .Net chamada Nustache.</p>
+
+<p>Com este sistema utilizamos tags "{{nomeDaVariavel}}" para definir os templates a serem substituídos, com os valores especificados nos arquivos "defaultConfig.json" e "templateConfig.json".</p>
+
+<h3>
+<a name="21---configurando-os-arquivos-para-serem-processados-pelo-sistema" class="anchor" href="#21---configurando-os-arquivos-para-serem-processados-pelo-sistema"><span class="octicon octicon-link"></span></a>2.1 - Configurando os arquivos para serem processados pelo sistema</h3>
+
+<p>Para que um arquivo seja marcado para ser processado pelo sistema, o mesmo deve conter a tag <code>"&lt;#CMS_TEMPLATE#&gt;"</code> declarada em algum local dentro do mesmo (de preferência nas primeiras linhas do arquivo), podendo a mesma estar dentro de um comentário, ex:</p>
+
+<p><strong>Arquivos HTML, XML, CONFIG, ASPX, ASCX, etc.:</strong> <code>&lt;!-- &lt;#CMS_TEMPLATE#&gt; --&gt;</code><br><strong>Arquivos CSS:</strong> <code>/* &lt;#CMS_TEMPLATE#&gt; */</code></p>
+
+<h3>
+<a name="22---utilizando-o-sistema-de-templates" class="anchor" href="#22---utilizando-o-sistema-de-templates"><span class="octicon octicon-link"></span></a>2.2 - Utilizando o sistema de templates</h3>
+
+<p>Utilizando os arquivos "defaultConfig.json" e "templateConfig.json", iremos criar variáveis para serem substituídas no momento do Deploy.</p>
+
+<h4>
+<a name="exemplo-1-arquivo-css" class="anchor" href="#exemplo-1-arquivo-css"><span class="octicon octicon-link"></span></a>Exemplo 1: arquivo CSS</h4>
+
+<p>Considere o seguinte CSS:</p>
+
+<div class="highlight highlight-CSS"><pre><span class="nt">body</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="o">:</span> <span class="m">#AFCC5E</span><span class="p">;</span>
+    <span class="k">width</span><span class="o">:</span> <span class="m">1004px</span><span class="p">;</span>
+    <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="k">solid</span> <span class="nb">black</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="o">:</span> <span class="m">12px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>Neste exemplo iremos criar um template para um arquivo CSS, para substituir a cor background padrão do sistema, o tamanho da fonte, a largura e a cor da borda.<br><strong>Obs.:</strong> Para o arquivo ser processado pelo sistema, lembre-se de adicionar a tag <code>"/* &lt;#CMS_TEMPLATE#&gt; */"</code> na primeira linha do arquivo.</p>
+
+<p>Assumindo que este CSS faça parte do "Modelo01" do template, iremos criar as seguintes variáveis no arquivo "templateConfig.json":</p>
+
+<div class="highlight highlight-JSON"><pre><span class="p">{</span>
+<span class="nt">"BodyBackgroundColor"</span> <span class="p">:</span> <span class="s2">"#AFCC5E"</span><span class="p">,</span>
+<span class="nt">"BodyWidth"</span> <span class="p">:</span> <span class="s2">"1004px"</span><span class="p">,</span>
+<span class="nt">"BodyFontSize"</span> <span class="p">:</span> <span class="s2">"12px"</span><span class="p">,</span>
+<span class="nt">"BodyBorderColor"</span> <span class="p">:</span> <span class="s2">"black"</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>Com base nestas variáveis, vamos atualizar o CSS para o seguinte:</p>
+
+<div class="highlight highlight-CSS"><pre><span class="nt">body</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="o">:</span> <span class="err">{{</span><span class="n">BodyBackgroundColor</span><span class="p">}</span><span class="err">}</span><span class="o">;</span>
+    <span class="nt">width</span><span class="o">:</span> <span class="p">{</span><span class="err">{</span><span class="n">BodyWidth</span><span class="p">}</span><span class="err">}</span><span class="o">;</span>
+    <span class="nt">border</span><span class="o">:</span> <span class="nt">1px</span> <span class="nt">solid</span> <span class="p">{</span><span class="err">{</span><span class="n">BodyBorderColor</span><span class="p">}</span><span class="err">}</span><span class="o">;</span>
+    <span class="nt">font-size</span><span class="o">:</span> <span class="p">{</span><span class="err">{</span><span class="n">BodyFontSize</span><span class="p">}</span><span class="err">}</span><span class="o">;</span>
+<span class="err">}</span>
+</pre></div>
+
+<p>Ao executar o deploy, teremos o resultado desejado no arquivo CSS:</p>
+
+<div class="highlight highlight-CSS"><pre><span class="nt">body</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="o">:</span> <span class="m">#AFCC5E</span><span class="p">;</span>
+    <span class="k">width</span><span class="o">:</span> <span class="m">1004px</span><span class="p">;</span>
+    <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="k">solid</span> <span class="nb">black</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="o">:</span> <span class="m">12px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<h4>
+<a name="exemplo-2-arquivo-xmlconfig" class="anchor" href="#exemplo-2-arquivo-xmlconfig"><span class="octicon octicon-link"></span></a>Exemplo 2: arquivo XML/Config</h4>
+
+<p>Considere o seguinte XML (parcial):</p>
+
+<div class="highlight highlight-XML"><pre><span class="nt">&lt;appSettings&gt;</span>
+    <span class="nt">&lt;add</span> <span class="na">key=</span><span class="s">"cod_imb"</span> <span class="na">value=</span><span class="s">"2357"</span> <span class="nt">/&gt;</span>
+    .
+    .
+    .
+<span class="nt">&lt;/appSettings&gt;</span>
+</pre></div>
+
+<p>Neste exemplo iremos criar um template para um arquivo XML, para informar o código da imobiliária desejada.<br><strong>Obs.:</strong> Para o arquivo ser processado pelo sistema, lembre-se de adicionar a tag <code>"&lt;!-- &lt;#CMS_TEMPLATE#&gt; --&gt;"</code> na primeira linha do arquivo.</p>
+
+<p>Assumindo que este XML/Config faça parte do "default" do template, iremos criar a seguinte variável no arquivo "defaultConfig.json":</p>
+
+<div class="highlight highlight-JSON"><pre><span class="p">{</span>
+<span class="nt">"CodImb"</span> <span class="p">:</span> <span class="s2">"2375"</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>Com base nesta variável, vamos atualizar o XML/Config para o seguinte:</p>
+
+<div class="highlight highlight-XML"><pre><span class="nt">&lt;appSettings&gt;</span>
+    <span class="nt">&lt;add</span> <span class="na">key=</span><span class="s">"cod_imb"</span> <span class="na">value=</span><span class="s">"{{CodImb}}"</span> <span class="nt">/&gt;</span>
+    .
+    .
+    .
+<span class="nt">&lt;/appSettings&gt;</span>
+</pre></div>
+
+<p>Ao executar o deploy, teremos o resultado desejado no arquivo XML/Config:</p>
+
+<div class="highlight highlight-XML"><pre><span class="nt">&lt;appSettings&gt;</span>
+    <span class="nt">&lt;add</span> <span class="na">key=</span><span class="s">"cod_imb"</span> <span class="na">value=</span><span class="s">"2357"</span> <span class="nt">/&gt;</span>
+    .
+    .
+    .
+<span class="nt">&lt;/appSettings&gt;</span>
+</pre></div>
+
+<h4>
+<a name="exemplo-3-arquivo-htmlaspxaspxetc" class="anchor" href="#exemplo-3-arquivo-htmlaspxaspxetc"><span class="octicon octicon-link"></span></a>Exemplo 3: arquivo HTML/ASPX/ASPX/etc</h4>
+
+<p>Considere que na pagina "index.aspx" devemos gerar a seguinte tabela com base numa lista de contatos:</p>
+
+<div class="highlight highlight-HTML"><pre><span class="nt">&lt;table</span> <span class="na">border=</span><span class="s">"0"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td&gt;</span>SJC<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>1111-9999<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Inacio<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Campinas<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>2222-8888<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Mauro<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td&gt;</span>São Paulo<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>3333-7777<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Fidélio<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+<span class="nt">&lt;/table&gt;</span>
+</pre></div>
+
+<p>Sendo as informações: Unidade, Telefone e Nome do Contato.</p>
+
+<p>Neste exemplo iremos criar um template para um arquivo ASPX, para montar dinamicamente uma tabela de contatos da imobiliária.<br><strong>Obs.:</strong> Para o arquivo ser processado pelo sistema, lembre-se de adicionar a tag <code>"&lt;!-- &lt;#CMS_TEMPLATE#&gt; --&gt;"</code> na primeira linha do arquivo.</p>
+
+<p>Assumindo que este ASPX faça parte do "Modelo01" do template, iremos criar a seguinte estrutura no arquivo "templateConfig.json":</p>
+
+<div class="highlight highlight-JSON"><pre><span class="s2">"ListaContatos"</span> <span class="err">:</span><span class="p">[</span>
+    <span class="p">{</span><span class="nt">"Unidade"</span> <span class="p">:</span> <span class="s2">"SJC"</span><span class="p">,</span> <span class="nt">"Telefone"</span> <span class="p">:</span> <span class="s2">"1111-9999"</span><span class="p">,</span> <span class="nt">"Nome"</span> <span class="p">:</span> <span class="s2">"Inacio"</span><span class="p">},</span>
+    <span class="p">{</span><span class="nt">"Unidade"</span> <span class="p">:</span> <span class="s2">"Campinas"</span><span class="p">,</span> <span class="nt">"Telefone"</span> <span class="p">:</span> <span class="s2">"2222-8888"</span><span class="p">,</span> <span class="nt">"Nome"</span> <span class="p">:</span> <span class="s2">"Mauro"</span><span class="p">},</span>
+    <span class="p">{</span><span class="nt">"Unidade"</span> <span class="p">:</span> <span class="s2">"São Paulo"</span><span class="p">,</span> <span class="nt">"Telefone"</span> <span class="p">:</span> <span class="s2">"3333-7777"</span><span class="p">,</span> <span class="nt">"Nome"</span> <span class="p">:</span> <span class="s2">"Fidélio"</span><span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+
+<p>Com base nesta estrutura, vamos atualizar o ASPX para o seguinte:</p>
+
+<div class="highlight highlight-HTML"><pre><span class="nt">&lt;table</span> <span class="na">border=</span><span class="s">"0"</span><span class="nt">&gt;</span>
+    {{#ListaContatos}}
+    <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td&gt;</span>{{Unidade}}<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>{{Telefone}}<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>{{Nome}}<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    {{/ListaContatos}}
+<span class="nt">&lt;/table&gt;</span>
+</pre></div>
+
+<p>Ao executar o deploy, teremos o resultado desejado no arquivo "index.aspx":</p>
+
+<div class="highlight highlight-HTML"><pre><span class="nt">&lt;table</span> <span class="na">border=</span><span class="s">"0"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td&gt;</span>SJC<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>1111-9999<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Inacio<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Campinas<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>2222-8888<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Mauro<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td&gt;</span>São Paulo<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>3333-7777<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Fidélio<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+<span class="nt">&lt;/table&gt;</span>
+</pre></div>
+
+<h2>
+<a name="3---resumo-de-utiliza%C3%A7%C3%A3o" class="anchor" href="#3---resumo-de-utiliza%C3%A7%C3%A3o"><span class="octicon octicon-link"></span></a>3 - Resumo de utilização</h2>
+
+<p>1 - Adicionar a tag de marcação de template (<code>"&lt;#CMS_TEMPLATE#&gt;"</code>) no arquivo desejado (deve estar dentro de um comentário);<br>
+2 - Identifique as variáveis/valores que deseja transformar e template, e substitua no formato "{{nomeDaVariavel}}";<br>
+3 - No arquivo correspondente ("defaultConfig.json" ou "templateConfig.json") crie as variáveis identificadas anteriormente em notação JSON;<br>
+4 - Repita os passos 1 a 3 para todos os arquivos a serem transformados em template;<br>
+5 - Configure o arquivo "baseConfig.json" com as informações desejadas;<br>
+6 - Configure o arquivo "imagensConfig.json" com os arquivos Logo e Marca D'Água, e a lista de arquivos/tamanhos a serem gerados;<br>
+7 - execute a aplicação "IValue.CMS.Console.exe" informando o arquivo baseConfig.json.<br></p>
+
+<p>Para utilização de lista de valores, a lista deve ser declarada no formato:</p>
+
+<div class="highlight highlight-JSON"><pre><span class="s2">"NomeDaLista"</span> <span class="err">:</span><span class="p">[</span>
+    <span class="p">{</span><span class="nt">"Parametro01"</span> <span class="p">:</span> <span class="s2">"valor01"</span><span class="p">,</span> <span class="nt">"Parametro02"</span> <span class="p">:</span> <span class="s2">"valor02"</span><span class="p">,</span> <span class="err">...</span> <span class="err">,</span> <span class="nt">"ParametroN"</span> <span class="p">:</span> <span class="s2">"valorN"</span><span class="p">},</span>
+    <span class="p">{</span><span class="nt">"Parametro01"</span> <span class="p">:</span> <span class="s2">"valor01"</span><span class="p">,</span> <span class="nt">"Parametro02"</span> <span class="p">:</span> <span class="s2">"valor02"</span><span class="p">,</span> <span class="err">...</span> <span class="err">,</span> <span class="nt">"ParametroN"</span> <span class="p">:</span> <span class="s2">"valorN"</span><span class="p">},</span>
+    <span class="err">.</span>
+    <span class="err">.</span>
+    <span class="err">.</span>
+    <span class="p">{</span><span class="nt">"Parametro01"</span> <span class="p">:</span> <span class="s2">"valor01"</span><span class="p">,</span> <span class="nt">"Parametro02"</span> <span class="p">:</span> <span class="s2">"valor02"</span><span class="p">,</span> <span class="err">...</span> <span class="err">,</span> <span class="nt">"ParametroN"</span> <span class="p">:</span> <span class="s2">"valorN"</span><span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+
+<p>Para consumir esta lista deve-se utilizar o seguinte template:</p>
+
+<pre><code>{{#NomeDaLista}}
+    Processar os itens da lista conforme necessário, utilizando o seguinte formato {{NomeDoParametro}}
+{{/NomeDaLista}}
+</code></pre>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Gaia.CMS maintained by <a href="https://github.com/I-Value">I-Value</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
