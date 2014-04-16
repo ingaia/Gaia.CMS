@@ -106,10 +106,10 @@ Com este sistema utilizamos tags "{{nomeDaVariavel}}" para definir os templates 
 
 ###2.1 - Configurando os arquivos para serem processados pelo sistema###
 
-Para que um arquivo seja marcado para ser processado pelo sistema, o mesmo deve conter a tag "<#CMS_TEMPLATE#>" declarada em algum local dentro do mesmo (de preferência nas primeiras linhas do arquivo), podendo a mesma estar dentro de um comentário, ex:
+Para que um arquivo seja marcado para ser processado pelo sistema, o mesmo deve conter a tag ```"<#CMS_TEMPLATE#>"``` declarada em algum local dentro do mesmo (de preferência nas primeiras linhas do arquivo), podendo a mesma estar dentro de um comentário, ex:
 
-**Arquivos HTML, XML, CONFIG, ASPX, ASCX, etc.:** <!-- <#CMS_TEMPLATE#> --><br>
-**Arquivos CSS:** /* <#CMS_TEMPLATE#> */
+**Arquivos HTML, XML, CONFIG, ASPX, ASCX, etc.:** ```<!-- <#CMS_TEMPLATE#> -->```<br>
+**Arquivos CSS:** ```/* <#CMS_TEMPLATE#> */```
 
 ###2.2 - Utilizando o sistema de templates###
 
@@ -127,7 +127,7 @@ body {
 }
 ```
 Neste exemplo iremos criar um template para um arquivo CSS, para substituir a cor background padrão do sistema, o tamanho da fonte, a largura e a cor da borda.<br>
-**Obs.:** Para o arquivo ser processado pelo sistema, lembre-se de adicionar a tag "/* <#CMS_TEMPLATE#> */" na primeira linha do arquivo.
+**Obs.:** Para o arquivo ser processado pelo sistema, lembre-se de adicionar a tag ```"/* <#CMS_TEMPLATE#> */"``` na primeira linha do arquivo.
 
 Assumindo que este CSS faça parte do "Modelo01" do template, iremos criar as seguintes variáveis no arquivo "templateConfig.json":
 
@@ -173,7 +173,7 @@ Considere o seguinte XML (parcial):
 ```
 
 Neste exemplo iremos criar um template para um arquivo XML, para informar o código da imobiliária desejada.<br>
-**Obs.:** Para o arquivo ser processado pelo sistema, lembre-se de adicionar a tag "<!-- <#CMS_TEMPLATE#> -->" na primeira linha do arquivo.
+**Obs.:** Para o arquivo ser processado pelo sistema, lembre-se de adicionar a tag ```"<!-- <#CMS_TEMPLATE#> -->"``` na primeira linha do arquivo.
 
 Assumindo que este XML/Config faça parte do "default" do template, iremos criar a seguinte variável no arquivo "defaultConfig.json":
 
@@ -229,7 +229,7 @@ Considere que na pagina "index.aspx" devemos gerar a seguinte tabela com base nu
 Sendo as informações: Unidade, Telefone e Nome do Contato.
 
 Neste exemplo iremos criar um template para um arquivo ASPX, para montar dinamicamente uma tabela de contatos da imobiliária.<br>
-**Obs.:** Para o arquivo ser processado pelo sistema, lembre-se de adicionar a tag "<!-- <#CMS_TEMPLATE#> -->" na primeira linha do arquivo.
+**Obs.:** Para o arquivo ser processado pelo sistema, lembre-se de adicionar a tag ```"<!-- <#CMS_TEMPLATE#> -->"``` na primeira linha do arquivo.
 
 Assumindo que este ASPX faça parte do "Modelo01" do template, iremos criar a seguinte estrutura no arquivo "templateConfig.json":
 
@@ -277,7 +277,7 @@ Ao executar o deploy, teremos o resultado desejado no arquivo "index.aspx":
 
 ##3 - Resumo de utilização##
 
-1 - Adicionar a tag de marcação de template ("<#CMS_TEMPLATE#>") no arquivo desejado (deve estar dentro de um comentário);<br>
+1 - Adicionar a tag de marcação de template (```"<#CMS_TEMPLATE#>"```) no arquivo desejado (deve estar dentro de um comentário);<br>
 2 - Identifique as variáveis/valores que deseja transformar e template, e substitua no formato "{{nomeDaVariavel}}";<br>
 3 - No arquivo correspondente ("defaultConfig.json" ou "templateConfig.json") crie as variáveis identificadas anteriormente em notação JSON;<br>
 4 - Repita os passos 1 a 3 para todos os arquivos a serem transformados em template;<br>
