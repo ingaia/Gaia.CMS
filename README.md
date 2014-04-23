@@ -3,17 +3,17 @@ Gaia.CMS.Console HELP
 
 **Índice:**
 
-**[1 - Utilização do comando de deploy](https://github.com/I-Value/Gaia.CMS/edit/master/README.md#1---utiliza%C3%A7%C3%A3o-do-comando-de-deploy)**<br>
-[1.1 - Configurando](https://github.com/I-Value/Gaia.CMS/edit/master/README.md#11---configurando)<br>
-[1.2 - Executando](https://github.com/I-Value/Gaia.CMS/edit/master/README.md#12---executando)<br><br>
-**[2 - Configuração do Template](https://github.com/I-Value/Gaia.CMS/edit/master/README.md#2---configura%C3%A7%C3%A3o-do-template)**<br>
-[2.1 - Configurando os arquivos para serem processados pelo sistema](https://github.com/I-Value/Gaia.CMS/edit/master/README.md#21---configurando-os-arquivos-para-serem-processados-pelo-sistema)<br>
-[2.2 - Utilizando o sistema de templates](https://github.com/I-Value/Gaia.CMS/edit/master/README.md#22---utilizando-o-sistema-de-templates)<br>
-[- Exemplo 1](https://github.com/I-Value/Gaia.CMS/edit/master/README.md#exemplo-1-arquivo-css)<br>
-[- Exemplo 2](https://github.com/I-Value/Gaia.CMS/edit/master/README.md#exemplo-2-arquivo-xmlconfig)<br>
-[- Exemplo 3](https://github.com/I-Value/Gaia.CMS/edit/master/README.md#exemplo-3-arquivo-htmlaspxaspxetc)<br>
+**[1 - Utilização do comando de deploy](https://github.com/I-Value/Gaia.CMS#1---utiliza%C3%A7%C3%A3o-do-comando-de-deploy)**<br>
+[1.1 - Configurando](https://github.com/I-Value/Gaia.CMS#11---configurando)<br>
+[1.2 - Executando](https://github.com/I-Value/Gaia.CMS#12---executando)<br><br>
+**[2 - Configuração do Template](https://github.com/I-Value/Gaia.CMS#2---configura%C3%A7%C3%A3o-do-template)**<br>
+[2.1 - Configurando os arquivos para serem processados pelo sistema](https://github.com/I-Value/Gaia.CMS#21---configurando-os-arquivos-para-serem-processados-pelo-sistema)<br>
+[2.2 - Utilizando o sistema de templates](https://github.com/I-Value/Gaia.CMS#22---utilizando-o-sistema-de-templates)<br>
+[- Exemplo 1](https://github.com/I-Value/Gaia.CMS#exemplo-1-arquivo-css)<br>
+[- Exemplo 2](https://github.com/I-Value/Gaia.CMS#exemplo-2-arquivo-xmlconfig)<br>
+[- Exemplo 3](https://github.com/I-Value/Gaia.CMS#exemplo-3-arquivo-htmlaspxaspxetc)<br>
 
-**[3 - Resumo de utilização](https://github.com/I-Value/Gaia.CMS/edit/master/README.md#3---resumo-de-utiliza%C3%A7%C3%A3o)**
+**[3 - Resumo de utilização](https://github.com/I-Value/Gaia.CMS#3---resumo-de-utiliza%C3%A7%C3%A3o)**
 
 =====================
 
