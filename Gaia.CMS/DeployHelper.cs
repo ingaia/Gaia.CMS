@@ -23,7 +23,7 @@ namespace Gaia.CMS
 
         public static void ExecuteTemplate(BaseConfig config, Dictionary<string, object> fullConfig, string marker)
         {
-            var sFiles = IOHelper.GetTemplateFiles(config.TargetPath, marker).ToList();
+            var sFiles = IOHelper.GetTemplateFiles(Path.Combine(config.TargetPath, config.ClientDirName), marker).ToList();
 
             foreach (var file in sFiles)
             {
